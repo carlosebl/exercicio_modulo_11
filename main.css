@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+section .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #ebac60;
+    padding: 24px;
+    border-bottom: 8px solid #c97815;
+}
+
+.menu li {
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 24px;
+}
+
+.sobre img {
+    max-width: 480px;
+    padding: 16px;
+}
+
+.sobre h2 {
+    padding: 8px;
+    color: #c97815;
+    border-bottom: 4px solid #c97815;
+    margin-bottom: 8px;
+}
+
+#loja h2 {
+    padding: 8px;
+    color: #c97815;
+    border-bottom: 4px solid #c97815;
+    margin-bottom: 8px;
+}
+
+.loja img {
+    max-width: 100%;
+}
+
+.loja ul {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+    align-items: baseline;
+}
+
+.loja ul li {
+    list-style: none;
+}
+
+.loja li h3 {
+    margin: 16px 0;
+}
+
+button {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #c97815;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    align-items: baseline;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 767px) {
+    header .container,
+    section .container {
+        display: block;
+    }
+
+    header h1 {
+        float: left;
+        font-size: 1.5em;
+        margin-right: 24px;
+    }
+
+    .menu li {
+        font-size: 1em;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre img {
+        display: block;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+
+    .sobre h2 {
+        padding: 8px;
+        color: #c97815;
+        border-bottom: 4px solid #c97815;
+        margin-bottom: 8px;
+    }
+
+    .loja ul {
+        display: block;
+    }
+
+    button {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .loja ul{
+        grid-template-columns: repeat(2, 49%);
+    }
+}
